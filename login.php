@@ -8,20 +8,10 @@
 <?php include_once "header.php"; ?>
 <body>
   <div class="wrapper">
-    <section class="form signup">
+    <section class="form login">
       <header>Komunikator internetowy</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
-        <div class="name-details">
-          <div class="field input">
-            <label>Imię</label>
-            <input type="text" name="fname" placeholder="Imię" required>
-          </div>
-          <div class="field input">
-            <label>Nazwisko</label>
-            <input type="text" name="lname" placeholder="Nazwisko" required>
-          </div>
-        </div>
         <div class="field input">
           <label>Email</label>
           <input type="text" name="email" placeholder="Wprowadź email" required>
@@ -31,20 +21,16 @@
           <input type="password" name="password" placeholder="Wprowadź hasło" required>
           <i class="fas fa-eye"></i>
         </div>
-        <div class="field image">
-          <label>Wybierz avatar</label>
-          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
-        </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Przejdź do rozmowy">
+          <input type="submit" name="submit" value="Continue to Chat">
         </div>
       </form>
-      <div class="link">Masz już konto? <a href="login.php">Zaloguj się!</a></div>
+      <div class="link">Nie posiadasz konta? <a href="index.php">Zarejestruj się!</a></div>
     </section>
   </div>
-
+  
   <script src="javascript/pass-show-hide.js"></script>
-  <script src="javascript/signup.js"></script>
+  <script src="javascript/login.js"></script>
 
 </body>
 </html>
