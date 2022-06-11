@@ -4,9 +4,9 @@ toggleIcon = document.querySelector(".form .field i");
 toggleIcon.onclick = () =>{
   if(pswrdField.type === "password"){
     pswrdField.type = "text";
-    toggleIcon.classList.add("active");
+    toggleIcon.classList.add("Dostępny");
   }else{
     pswrdField.type = "password";
-    toggleIcon.classList.remove("active");
+    toggleIcon.classList.remove("Dostępny");
   }
 }

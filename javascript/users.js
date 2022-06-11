@@ -4,20 +4,20 @@ usersList = document.querySelector(".users-list");
 
 searchIcon.onclick = ()=>{
   searchBar.classList.toggle("show");
-  searchIcon.classList.toggle("active");
+  searchIcon.classList.toggle("Dostępny");
   searchBar.focus();
-  if(searchBar.classList.contains("active")){
+  if(searchBar.classList.contains("Dostępny")){
     searchBar.value = "";
-    searchBar.classList.remove("active");
+    searchBar.classList.remove("Dostępny");
   }
 }
 
 searchBar.onkeyup = ()=>{
   let searchTerm = searchBar.value;
   if(searchTerm != ""){
-    searchBar.classList.add("active");
+    searchBar.classList.add("Dostępny");
   }else{
-    searchBar.classList.remove("active");
+    searchBar.classList.remove("Dostępny");
   }
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "php/search.php", true);
@@ -40,7 +40,7 @@ setInterval(() =>{
     if(xhr.readyState === XMLHttpRequest.DONE){
         if(xhr.status === 200){
           let data = xhr.response;
-          if(!searchBar.classList.contains("active")){
+          if(!searchBar.classList.contains("Dostępny")){
             usersList.innerHTML = data;
           }
         }

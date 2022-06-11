@@ -11,9 +11,9 @@ form.onsubmit = (e)=>{
 inputField.focus();
 inputField.onkeyup = ()=>{
     if(inputField.value != ""){
-        sendBtn.classList.add("active");
+        sendBtn.classList.add("Dostępny");
     }else{
-        sendBtn.classList.remove("active");
+        sendBtn.classList.remove("Dostępny");
     }
 }
 
@@ -32,11 +32,11 @@ sendBtn.onclick = ()=>{
     xhr.send(formData);
 }
 chatBox.onmouseenter = ()=>{
-    chatBox.classList.add("active");
+    chatBox.classList.add("Dostępny");
 }
 
 chatBox.onmouseleave = ()=>{
-    chatBox.classList.remove("active");
+    chatBox.classList.remove("Dostępny");
 }
 
 setInterval(() =>{
@@ -47,7 +47,7 @@ setInterval(() =>{
           if(xhr.status === 200){
             let data = xhr.response;
             chatBox.innerHTML = data;
-            if(!chatBox.classList.contains("active")){
+            if(!chatBox.classList.contains("Dostępny")){
                 scrollToBottom();
               }
           }
