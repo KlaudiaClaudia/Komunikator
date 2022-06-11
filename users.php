@@ -27,7 +27,7 @@
       </header>
       <div class="search">
         <span class="text">Wybierz użytkownika do rozmowy</span>
-        <input type="text" placeholder="Enter name to search...">
+        <input type="text" placeholder="Wprowadź imię do wyszukania ..">
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">

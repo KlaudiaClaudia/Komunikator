@@ -9,7 +9,7 @@
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
             if(mysqli_num_rows($sql) > 0){
-                echo "$email - Email już istnieję!";
+                echo "$email - This email already exist!";
             }else{
                 if(isset($_FILES['image'])){
                     $img_name = $_FILES['image']['name'];
@@ -27,7 +27,7 @@
                             $new_img_name = $time.$img_name;
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
-                                $status = "Dostępny";
+                                $status = "Active now";
                                 $encrypt_pass = md5($password);
                                 $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}')");
@@ -36,8 +36,8 @@
                                     if(mysqli_num_rows($select_sql2) > 0){
                                         $result = mysqli_fetch_assoc($select_sql2);
                                         $_SESSION['unique_id'] = $result['unique_id'];
-                                        echo "Udało się";
-                                    }else{
+                                        echo "success";
+                                   }else{
                                         echo "Adres email nie istnieję!";
                                     }
                                 }else{

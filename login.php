@@ -22,7 +22,7 @@
           <i class="fas fa-eye"></i>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+          <input type="submit" name="submit" value="Przejdź do chatu">
         </div>
       </form>
       <div class="link">Nie posiadasz konta? <a href="index.php">Zarejestruj się!</a></div>
